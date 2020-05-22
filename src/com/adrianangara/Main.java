@@ -2,6 +2,7 @@ package com.adrianangara;
 
 import com.adrianangara.recursion.ReverseAString;
 import com.adrianangara.recursion.SumOfSquares;
+import com.adrianangara.recursion.TowersOfHanoi;
 
 import java.util.Scanner;
 
@@ -17,13 +18,17 @@ public class Main {
 //        System.out.println("The sum of squares between " + n + " and " + m + " is: " + sum);
 
         //Reverse a string inputted by the user
-        Scanner in = new Scanner(System.in);
-        ReverseAString rev = new ReverseAString();
+//        Scanner in = new Scanner(System.in);
+//        ReverseAString rev = new ReverseAString();
+//
+//        String s = in.nextLine();
+//        System.out.println(rev.reverseAString(s));
 
-        String s = in.nextLine();
-        System.out.println(rev.reverseAString(s));
+        //Move the disks in the tower of hanoi
+        TowersOfHanoi toh = new TowersOfHanoi();
+        int start = 1, spare = 2, finish = 3;
 
-
+        toh.moveTowers(start, spare, finish, finish);
 
     }
 }
