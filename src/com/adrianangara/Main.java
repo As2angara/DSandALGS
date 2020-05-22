@@ -1,5 +1,6 @@
 package com.adrianangara;
 
+import com.adrianangara.recursion.MinNumber;
 import com.adrianangara.recursion.ReverseAString;
 import com.adrianangara.recursion.SumOfSquares;
 import com.adrianangara.recursion.TowersOfHanoi;
@@ -25,10 +26,17 @@ public class Main {
 //        System.out.println(rev.reverseAString(s));
 
         //Move the disks in the tower of hanoi
-        TowersOfHanoi toh = new TowersOfHanoi();
-        int start = 1, spare = 2, finish = 3;
+//        TowersOfHanoi toh = new TowersOfHanoi();
+//        int start = 1, spare = 2, finish = 3;
+//
+//        toh.moveTowers(start, spare, finish, finish);
 
-        toh.moveTowers(start, spare, finish, finish);
+        //Find the min value in an array
+        MinNumber mn = new MinNumber();
+
+        int[] arr = { 10, 0, 5, 2};
+
+        System.out.println(mn.getMin(arr, 0, 4));
 
     }
 }

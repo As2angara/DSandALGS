@@ -7,7 +7,18 @@ public class MinNumber {
     //Implementation #1
     public int getMin(int[] arr, int i, int n) {
 
-        return 0;
+        if( i == n-1) {
+            return arr[i];
+        } else {
+            int curr = arr[i];
+            int minRest = getMin(arr, i+1, n);
+
+            if(curr < minRest) {
+                return curr;
+            } else {
+                return minRest;
+            }
+        }
 
     }
 
