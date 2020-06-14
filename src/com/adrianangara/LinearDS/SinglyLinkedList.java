@@ -2,7 +2,7 @@ package com.adrianangara.LinearDS;
 
 public class SinglyLinkedList<E> {
 
-    private static class Node<E> {
+    public static class Node<E> {
 
         E element;
         private Node<E> next = null;
@@ -26,9 +26,9 @@ public class SinglyLinkedList<E> {
 
     }
 
-    private Node<E> head;
-    private Node<E> tail;
-    private int size;
+    public Node<E> head;
+    public Node<E> tail;
+    public int size;
 
     public SinglyLinkedList() {
         head = null;
@@ -107,5 +107,34 @@ public class SinglyLinkedList<E> {
         return element;
     }
 
+    // --------------------------------------- //
+
+    // Example 1: Find whether an element exists in a linked list
+    public boolean findIfElementExists(E element) {
+        boolean found = false;
+        Node<E> temp = head;
+
+        while(temp != null && !found) {
+            if(temp.getElement() == element) {
+                found = true;
+            }
+
+            temp = temp.getNext();
+        }
+        return found;
+    }
+
+    // Example 2: Find whether an element exists in a linked list recursively
+    public boolean findIfElementExistsRec(E element, Node<E> node) {
+        if (node == null) {
+            return false;
+        } else {
+            if(node.getElement() == element) {
+                return true;
+            } else {
+                return  findIfElementExistsRec(element, node.getNext());
+            }
+        }
+    }
 
 }
