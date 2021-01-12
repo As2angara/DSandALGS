@@ -8,6 +8,11 @@ import java.util.regex.*;
 
 public class Solution {
 
+    //constructor
+    public Solution() {
+
+    }
+
     // Complete the sockMerchant function below.
     static int sockMerchant(int n, int[] ar) {
         
@@ -100,5 +105,21 @@ public class Solution {
         
          
     }
+
+	public int highestNum(int[] arr) {
+
+        //int highest = arr[0];
+
+        for (int i=0; i < arr.length; i++) {
+
+            if (i < arr.length - 1 && arr[i+1] > arr[i]  ) {
+                arr[0] = arr[i+1];
+            }
+
+        }
+
+        return arr[0];
+    }
+    
 
 }
